@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>로그인 성공</title>
+<link rel="stylesheet" href="/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+<script src="/js/jquery-3.5.1.js" th:src="@{/js/jquery-3.5.1.js}"></script>
+<script src="/js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
+<script src="/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
+</head>
+<body>
+	<header class="container">
+		<div class="jumbotron">
+			<h1>로그인 성공</h1>
+		</div>
+	</header>
+	<main class="container">
+		<section class="row">
+			<div class="col-sm-6 mx-auto">
+				<p th:if="${session.userId} != null" th:text="|${session.userId} 님 안녕하세요|"></p>
+				<a href="/login/logout" class="btn btn-outline-primary" id="btnLogout">로그아웃</a>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

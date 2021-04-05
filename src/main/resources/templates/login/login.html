@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>로그인 페이지</title>
+<link rel="stylesheet" href="/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+<script src="/js/jquery-3.5.1.js" th:src="@{/js/jquery-3.5.1.js}"></script>
+<script src="/js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
+<script src="/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
+
+</head>
+<body>
+	<header class="container">
+		<div class="jumbotron">
+			<h1 class="text-center">로그인 페이지</h1>
+		</div>
+	</header>
+	<main class="container">
+		<section class="row">
+			<article class="col-sm-6 mx-auto">
+				<!-- get으로 보내면 주소창에 id, pw 다 붙여서 보내기 때문에 꼭 POST 형식으로 보내주기 -->
+				<form action="/login/loginCheck" method="POST">
+					<div class="form-group">
+						<label for="userId">ID : </label>
+						<input type="text" class="form-control" id="userId" name="userId" placeholder="ID를 입력해주세요">
+					</div>
+					<div class="form-group">
+						<label for="userPw">비밀번호 : </label>
+						<input type="password" class="form-control" id="userPw" name="userPw" placeholder="비밀번호를 입력해주세요">
+					</div>
+					<button type="submit" class="btn btn-primary btn-block">로그인</button>
+				</form>
+			</article>
+		</section>
+	</main>
+	<footer class="jumbotron mt-3 mb-0">
+		<div class="container">
+			<h5 class="text-center">made by bitc</h5>
+		</div>
+	</footer>
+</body>
+</html>
